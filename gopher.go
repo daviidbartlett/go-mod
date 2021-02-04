@@ -12,6 +12,11 @@ func New (name string) Gopher{
 }
 
 //FavFood returns Gopher struct favFood field
-func (g Gopher) FavFood() string{
+func (g *Gopher) FavFood() string{
 	return g.favFood
+}
+
+// SetFood reassigns gopher's favourite food
+func (g *Gopher) SetFood(food string) {
+	g.favFood = food
 }
